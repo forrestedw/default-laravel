@@ -32,7 +32,7 @@ php artisan make:auth
 
 We take away the `register` route, as I don't often use this:
 
-```
+```php
 //web.php
 
 Auth::routes(['register' => false]);
@@ -54,7 +54,7 @@ $ npx tailwind init
 
 
 And finally we edit `webpack.mix.js` for Tailwind and BrowserSync:
-```
+```js
 //webpack.mix.js
 const mix = require('laravel-mix');
 
