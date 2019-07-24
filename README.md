@@ -102,7 +102,10 @@ $ composer update
 
 
 ### Set up
-Make your .env.
+Make your .env :
+```
+$ cp .env.example .env
+```
 
 Generate an application key:
 ```
