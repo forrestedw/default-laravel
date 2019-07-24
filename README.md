@@ -125,4 +125,4 @@ Link the storage files:
 $ php artisan storage:link
 ```
 
-*Note:* Although TailwindCSS is added as a package, you need to uncomment it in `resources/sass/app.scss` and comment out the other default Laravel lines. This is because none of the class names have been changed, so they are all still the default Laravel Bootstrap class names.
+*Note:* Although TailwindCSS is added as a package, you need to uncomment it in `resources/sass/app.scss` and comment out the other default Laravel lines. This is because none of the class names have been changed, so they are all still the default Laravel Bootstrap class names. I leave that to you!
