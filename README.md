@@ -56,7 +56,7 @@ Auth::routes(['register' => false]);
 ```
 
 
-And finally we edit `webpack.mix.js` for Tailwind and BrowserSync:
+`webpack.mix.js` is edited for TailwindCSS and BrowserSync:
 ```js
 //webpack.mix.js
 const mix = require('laravel-mix');
@@ -71,16 +71,20 @@ mix.sass('resources/sass/app.scss', 'public/css')
         postCss: [ tailwindcss('./tailwind.config.js') ],
     });
 
-mix.webpackConfig({
-    watchOptions: {
-        ignored: /node_modules/
-    }
-});
-
 mix.browserSync({
     proxy: 'default-laravel.test'
 });
 ```
+
+`head.blade.php` and `nav.blade.php` have split out the relavant parts from the default Laravel files.
+
+`alerts.blade.php` has been added for simple flash alert usage, eg:
+```php
+return route('name')->with('success', 'You succeeed!');
+```
+
+And a blank `footer.blade.php` has been added, because. 
+
 
 ## Installation and set up
 
@@ -95,11 +99,15 @@ cd into the repo:
 $ cd default-laravel
 ```
 
-Then run composer to download all dependencies:
+Install all dependencies from `composer.json`:
 ```
 $ composer update
 ```
 
+Install all dependencies from `package.json`:
+```
+$ npm install
+```
 
 ### Set up
 Make your .env :
@@ -117,4 +125,4 @@ Link the storage files:
 $ php artisan storage:link
 ```
 
-
+*Note:* Although TailwindCSS is added as a package, you need to uncomment it in `resources/sass/app.scss` and comment out the other default Laravel lines. This is because none of the class names have been changed, so they are all still the default Laravel Bootstrap class names.
