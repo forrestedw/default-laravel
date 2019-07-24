@@ -1,12 +1,12 @@
 # default-laravel
-A basic Laravel setup
+Start your next laravel project faster.
 
-This is my default Laravel site. It's the site I often start a project with. It includes the tool packages I use to code, TailwindCSS installed, webpack set up for Tailwind and BrowserSync, and some basic blade template changes.
+This is clean Laravel install with added tools and changes to get your next project started faster. It includes useful tools for increasing efficiency, TailwindCSS, webpack set up for Tailwind and BrowserSync, and some basic blade template changes.
 
 ## What this repo contains
 
-### Packages
-These are the packages this repo pulls in:
+### Dependencies
+These are the dependencies this repo pulls in:
 
 ```
 $ composer require barryvdh/laravel-debugbar --dev
@@ -47,7 +47,7 @@ $ php artisan make:auth
 ```
 
 
-The `register` route has been taken away, as I don't often use this:
+The `register` route has been taken away. Delete the square brackets and their contents if you want it back:
 
 ```php
 //web.php
@@ -76,7 +76,7 @@ mix.browserSync({
 });
 ```
 
-`head.blade.php` and `nav.blade.php` have split out the relavant parts from the default Laravel files.
+`head.blade.php` and `nav.blade.php` have split out the relevant parts from the default Laravel files.
 
 `alerts.blade.php` has been added for simple flash alert usage, eg:
 ```php
@@ -125,4 +125,6 @@ Link the storage files:
 $ php artisan storage:link
 ```
 
-*Note:* Although TailwindCSS is added as a package, you need to uncomment it in `resources/sass/app.scss` and comment out the other default Laravel lines. This is because none of the class names have been changed, so they are all still the default Laravel Bootstrap class names. I leave that to you!
+Go make something great!
+
+**Note:** Although TailwindCSS is added as a package, you need to uncomment it in `resources/sass/app.scss` and comment out the other default Laravel lines. This is because none of the class names have been changed, so they are all still the default Laravel Bootstrap class names. That is left to you.
